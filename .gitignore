@@ -2,3 +2,6 @@
 *.iml
 .idea/*.xml
 bower_components
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/scopes/scope_settings.xml

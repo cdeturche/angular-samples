@@ -22,3 +22,8 @@ Configurer les tests unitaires avec Karma
 * répondre aux différentes questions
 * dans files, ajouter angular.js et angular-mocks.js
 * Comment ajouter l'autocompletion de Jasmine ? Ajouter les DefinitelyTyped comme librairies Javascript dans Webstorm
+
+TODO
+----
+
+* Documenter pour la couverture de tests
