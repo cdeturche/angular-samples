@@ -5,9 +5,15 @@
         .module('testing')
         .controller('Products', Products);
 
-    Products.$inject = [];
+    Products.$inject = ['productService'];
 
-    function Products() {
+    function Products(productService) {
+        var vm = this;
 
+        vm.addProduct = addProduct;
+
+        function addProduct(o) {
+            productService.add(o);
+        };
     }
 })();

@@ -42,9 +42,37 @@ Couverture de code
    
 * Lancer Run "karma.conf.js" with coverage
 
+Utiliser la librairie de mocking sinon
+--------------------------------------
+
+* npm install karma-sinon
+* frameworks: ['jasmine', 'sinon']
+
+``` javascript
+    beforeEach(module('testing',
+                function($provide) {
+                    sandbox = sinon.sandbox.create();
+                    stubProductService = sinon.stub({
+                        add : function() {}
+                    });
+
+                    $provide.value('productService', stubProductService);
+                }));
+                
+            it('should add a product with service', function() {
+                vm.addProduct({label:"HP Soundblast"});
+                expect(stubProductService.add.calledOnce).toEqual(true);
+            })
+```
+
 TODO
 ----
 
 * Intégrer sinon
 * Traiter les dépendances Node
 * Travailler avec Gulp
+
+
+A lire
+------
+http://www.uvd.co.uk/blog/no-excuses-angularjs-unit-testing-with-sinon-and-provide/
