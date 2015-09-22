@@ -65,6 +65,42 @@ Utiliser la librairie de mocking sinon
             })
 ```
 
+Routing
+-------
+
+* bower install angular-route --save
+* Ajout du module ng-route
+
+``` javascript
+    var app =angular
+                .module('routing', ['ngRoute']);
+```
+
+* Configuration de l'application avec $routeProvider
+
+``` javascript
+    app.config(['$routeProvider',
+        function($routeProvider) {
+
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'home.html',
+                    controller: 'HomeCtrl',
+                    controllerAs: 'vm'
+                })
+                .when('/players', {
+                    templateUrl: 'players.html',
+                    controller: 'Players',
+                    controllerAs: 'vm'
+                })
+                .otherwise({
+                    templateUrl: '404.html'
+                })
+
+        }
+    ]);
+```
+
 TODO
 ----
 
