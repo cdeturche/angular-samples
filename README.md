@@ -104,9 +104,12 @@ Routing
 TODO
 ----
 
-* Intégrer sinon
 * Traiter les dépendances Node
 * Travailler avec Gulp
+* Revoir la manière dont je veux travailler sur ce projet
+
+> Ce que je souhaite accomplir, c'est de prendre un sujet précis
+> l'explorer à fond, tout en ayant une idée de base de ce que je veux accomplir
 
 
 A lire

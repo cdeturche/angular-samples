@@ -1,5 +1,18 @@
 <h1>Liste des joueurs</h1>
 
 <ul>
-    <li ng-repeat="player in vm.players">{{player.name}}</li>
+    <li ng-repeat="player in vm.players"><a ng-href="#/players/{{player.id}}">{{player.name}}</a></li>
 </ul>
+
+<button ng-click="vm.showAdd()">Ajout</button>
+
+<div ng-show="vm.showAddPlayer">
+
+    <h1>Ajouter un joueur</h1>
+
+    <input type="text" ng-model="vm.playerAdd.name"/>
+    <input type="text" ng-model="vm.playerAdd.nationality"/>
+    <button ng-click="vm.addPlayer()">Ajouter un joueur</button>
+
+
+</div>

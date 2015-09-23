@@ -1,11 +1,11 @@
-(function() {
+(function () {
     'use strict';
 
-    var app =angular
-                .module('routing', ['ngRoute']);
+    var app = angular
+        .module('routing', ['ngRoute']);
 
     app.config(['$routeProvider',
-        function($routeProvider) {
+        function ($routeProvider) {
 
             $routeProvider
                 .when('/', {
@@ -18,9 +18,14 @@
                     controller: 'Players',
                     controllerAs: 'vm'
                 })
+                .when('/players/:playerId', {
+                    templateUrl: 'player.html',
+                    controller: 'Players',
+                    controllerAs: 'vm'
+                })
                 .otherwise({
                     templateUrl: '404.html'
-                })
+                });
 
         }
     ]);
